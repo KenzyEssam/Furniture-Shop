@@ -1,0 +1,199 @@
+/* General */
+/* 
+.main {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  text-align: center;
+  height: auto;
+  width: 280px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.card .title {
+  font-size: 5em;
+  margin: 15px;
+}
+.card .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.form label {
+  cursor: pointer;
+}
+.card .form .input-radio {
+  box-shadow: 0px 0px 0px 1px #6d6d6d;
+  font-size: 2em;
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  border: 4px solid #fff;
+  background-clip: border-box;
+  border-radius: 50%;
+  appearance: none;
+
+}
+.card .form label {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 17px;
+  
+  
+}
+
+.input-radio.on:checked {
+  box-shadow: 0px 0px 0px 4px #000000;
+  background-color: #000000;
+}
+.input-radio.off:checked {
+  box-shadow: 0px 0px 0px 4px #000000;
+  background-color:#000000 ;
+} */
+body {
+    background: #136841;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+  }
+  /* Title */
+.title {
+  color: #f9bf29; 
+  font-size: 28px; 
+  font-weight: 700;
+  padding-bottom: 15px;
+  text-align: center; 
+}
+
+  form {
+    background-color: #E6E6E6;
+    background-repeat: no-repeat;
+    color: #666;
+    text-align: center;
+    width: 285px;
+    padding-top: 42px;
+    margin: 50px auto;
+    border-radius: 4px;
+  }
+  
+  .header {
+    color: #f9bf29;
+    font-weight: 700;
+    font-size: 28px;
+    padding-bottom: 15px;
+  }
+  
+  .optional {
+    display: inline-block;
+    background: F2F3F5;
+  }
+  
+  #space {
+    padding: 1em;
+  }
+  
+  .footer {
+    background: #F2F2F2;
+    height: 45px;
+    border-radius: 0 0 4px 4px;
+    font-size: 12px;
+    margin-top: 88px;
+    padding-top: 3px;
+  }
+  
+  .footer span {
+    color: #f9bf29;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  
+  
+  /* Fields and Button */
+  
+  .button {
+    width: 80%;
+    height: 42px;
+    margin: 13px 0px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background: #F2F3F5;
+    background-repeat: no-repeat;
+    background-position: 15px 17px;
+    text-indent: 17%;
+    font-family: inherit;
+    font-size: 16px;
+    color: #737373;
+  }
+  
+  #submit {
+    background-color: #f9bf29;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 300;
+    color: #303030;
+    margin-bottom: 8px;
+    text-indent: 0;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+    border-radius: 50px;
+    font-weight: bold;
+  }
+  
+  #submit:hover {
+    background-color: #a46a58;
+  }
+  
+  
+  
+  /* Username & Password Icons */
+  
+  #username {
+    background-image: url('https://static.tumblr.com/mnsbkhd/24dms3lei/male.png');
+  }
+  
+  #password {
+    background-image: url('https://static.tumblr.com/mnsbkhd/5IMms3ldm/locked.png');
+  }
+  
+  
+  
+  /* Checkbox */
+  
+  input[type='checkbox'] {
+    visibility: hidden;
+  }
+  
+  input[type='checkbox'] + label span {
+    display: inline-block;
+    background: inherit;
+    border: 2px solid #FA4811;
+    border-radius: 35%;
+    margin: -1px 4px 0 0;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type='checkbox']:checked + label span {
+    background: #FA4811;
+    border: 2px solid #FA4811;
+  }
+  

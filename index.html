@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniHuB</title>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="./css/style_sign_in.css">
+    <link rel = "icon" href = "./favicon.png" type = "image/x-icon">
+   
+</head>
+<body>
+    <div class="title" >
+        <p style="color: #eee; font-size: 28px; 
+        font-weight: 700;
+        padding-bottom: 15px;
+        text-align: center; 
+        font-weight: bold;">FurniHuB</p>
+    </div>
+    <div class="container" id="container">
+        
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <div class="infieldd">
+                   
+                    <input type="radio" name="userType" value="customer" />
+                    Customer
+                    <input type="radio" name="userType" value="user" />
+                    seller
+                </div>
+                <div class="infield">
+                    <input type="text" placeholder="Name" />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="text" placeholder="Username" />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+
+            <form action="#" method="post" name="sign_in_form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div class="infield">
+                    <input type="text" class="button" id="username" name="username" placeholder="Username"/>
+                    <label></label>
+                </div>
+                
+                
+                <div class="infield">
+                    <input type="password" class="button" id="password" name="password" placeholder="Password"/>
+                    <label></label>
+                    
+                </div>
+                <div style="display: flex;">
+                    <div class="infieldd">
+                        <input type="radio" class="input-radio off" checked name="pilih" value="admin">
+                        Admin
+                        <input type="radio" class="input-radio on" name="pilih" value="customer">
+                        Customer
+                        <input type="radio" class="input-radio on" name="pilih" value="seller">
+                        seller
+                    </div>
+                
+                </div>
+               
+                
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button type="submit" class="button" id="submit" value="SIGN IN" onclick="open_Tap()">Sign In</button>
+                
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep Connected with us Please login with your Personal info</p>
+                    <button>Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with Our Furni</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+    <!-- js code -->
+    <script>
+        const container = document.getElementById('container');
+        const overlayCon = document.getElementById('overlayCon');
+        const overlayBtn = document.getElementById('overlayBtn');
+
+        overlayBtn.addEventListener('click', () => {
+            container.classList.toggle('right-panel-active');
+
+            overlayBtn.classList.remove('btnScale');
+            window.requestAnimationFrame ( () => {
+                overlayBtn.classList.add('btnScale');
+            });
+        });
+        
+        function getSelectedRole() {
+            var radioButtons = document.getElementsByName('pilih');
+
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    return radioButtons[i].value;
+                }
+            }
+            return null;
+        }
+        document.querySelector('form[name="sign_in_form"]').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            var username1='a'
+            var password1='a'
+            var username2='m'
+            var password2='m'
+            var username3='k'
+            var password3='k'
+            var radioButtons = document.getElementsByName('pilih');
+            if (username === username1 && password === password1) {
+                if (getSelectedRole()==='admin'){
+                    window.location.href = './Admin_pages/Manage.html';
+                     }
+               
+                else{
+                   alert('Incorrect username or password. Please try again.');
+                    
+                }
+                
+            }
+            else if (username === username2 && password === password2) {
+                if (getSelectedRole()==='seller'){
+                    window.location.href = './home2.html';
+                }
+                else{
+                   alert('Incorrect username or password. Please try again.');
+                    
+                }
+            }
+
+            else if (username === username3 && password === password3) {
+                if (getSelectedRole()==='customer'){
+                    window.location.href = './home.html';
+                }
+                else{
+                   alert('Incorrect username or password. Please try again.');
+                    
+                }
+            }
+            
+            
+            else {
+                alert('Incorrect username or password. Please try again.');
+            }
+            
+        });
+        
+
+
+    </script>
+
+</body>
+</html>

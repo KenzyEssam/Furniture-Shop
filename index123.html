@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel = "icon" href = "./favicon.png" type = "image/x-icon">
+</head>
+<body>
+    <div class="title">
+        <p style="color: #eee">FurniHub</p>
+    </div>
+    <form action="#" method="post" name="sign_in_form">
+        <div class="header">
+            <p><strong>SIGN IN</strong></p>
+        </div>
+        <div>
+            <input type="text" class="button" id="username" name="username" placeholder="Username"><br>
+            <input type="password" class="button" id="password" name="password" placeholder="Password"><br>
+            <label><input type="radio" class="input-radio off" checked name="pilih" value="admin"> Admin</label>
+            <label><input type="radio" class="input-radio on" name="pilih" value="customer"> Consumer</label>
+
+            <input type="submit" class="button" id="submit" value="SIGN IN" onclick="open_Tap()"><br>
+                
+        </div>
+        
+        <div class="footer">
+        </div>
+    </form>
+    <script src="./signin_script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Seller Dashboard</title>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link href="css/sellerform.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<script>
+		function showPopup() {
+			// Show the popup
+			document.getElementById('popup').style.display = 'block';
+		}
+	
+		function hidePopup() {
+			// Hide the popup
+			document.getElementById('popup').style.display = 'none';
+		}
+	</script>
+	
+
+<div class="form-style-10">
+<h1>Seller Dashboard<span>Ensure that the products you add meet our high standards for quality.</span></h1>
+<form>
+    <div class="section"><span style="color: black;">1</span>Add Product</div>
+    <div class="inner-wrap">
+        <label>Product ID <input type="text" name="field1" /></label>
+        <label>Product Name <input name="field1" type="text"></label>
+		<label>Product Price <input name="field1" type="text"></label>
+		<label>Product Description <input name="field1" type="text"></label>
+		<label for="photo">Upload Photo:</label>
+		<input type="file" id="photo" name="photo" accept="image/*" style="margin-top: 5px; margin-bottom:20px; padding: 5px; border: 1px solid #ccc; border-radius: 3px;" />
+		<br>
+		<input type="button" name="Sign Up" value="Add Product" onclick="showPopup()" />
+         
+		<!-- Hidden popup -->
+		<div id="popup">
+			<p>Your request has been sent to the admin successfully !
+			</p>
+			<button onclick="hidePopup()" style="background-color: #f9bf29; border-radius: 5px; font-size:15px;">Close</button>
+		</div>
+    </div>
+
+    <div class="section"><span style="color: black;">2</span>Update Product</div>
+    <div class="inner-wrap">
+		<label>Product ID <input type="text" name="field1" /></label>
+        <label>New Product Name<input name="field1" type="text"></label>
+		<label>New Product Price <input name="field1" type="text"></label>
+		<label>New Product Description <input name="field1" type="text"></label>
+		<input type="button" name="Sign Up" value="Update Product" onclick="showPopup()" style="margin-top: 12px;" />
+        <!-- Hidden popup -->
+		<div id="popup">
+			<p>Your request has been sent to the admin successfully !
+			</p>
+			<button onclick="hidePopup()" style="background-color: #f9bf29; border-radius: 5px; font-size:15px;">Close</button>
+		</div>
+    </div>
+
+    <div class="section"><span style="color: black;">3</span>Delete Product</div>
+        <div class="inner-wrap">
+			<label>Product ID<input name="field1" type="text"></label>
+			<input type="button" name="Sign Up" value="Delete Product" onclick="showPopup()" style="margin-top: 12px;"/>
+         <!-- Hidden popup -->
+		<div id="popup">
+			<p>Your request has been sent to the admin successfully !
+			</p>
+			<button onclick="hidePopup()" style="background-color: #f9bf29; border-radius: 5px; font-size:15px;">Close</button>
+		</div>
+    </div>
+    <div class="button-section">
+     <span class="privacy-policy">
+     </span>
+    </div>
+</form>
+</div>
+
+
+
+
+</body>
+</html>
